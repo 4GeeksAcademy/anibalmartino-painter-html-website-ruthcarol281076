@@ -59,7 +59,9 @@
   <!-- ============================= -->
   <header role="banner">
     <nav role="navigation" aria-label="Navegación principal">
-      <a href="#hero" class="nav-logo" aria-label="Anibal Martino - Inicio">Anibal Martino</a>
+      <a href="#hero" class="nav-logo" aria-label="Anibal Martino - Inicio">
+        <img src="img/logo-anibal-martino.jpg" alt="Logo de Anibal Martino" class="nav-logo-image">
+      </a>
 
       <!-- Botón de menú móvil (funcionalidad JS a implementar) -->
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
@@ -68,9 +70,10 @@
 
       <ul id="nav-menu" class="nav-menu">
         <li><a href="#hero" aria-current="page">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#sobre-mi">El artista</a></li>
+        <li><a href="#obra">La obra</a></li>
         <li><a href="#trayectoria">Trayectoria</a></li>
-        <li><a href="#presentaciones">Próximas presentaciones</a></li>
+        <li><a href="#presentaciones">Eventos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -95,16 +98,59 @@
     <!-- SOBRE MÍ (100vh)              -->
     <!-- ============================= -->
     <section id="sobre-mi" class="about-section" aria-labelledby="sobre-mi-titulo">
-      <h2 id="sobre-mi-titulo">Sobre mí</h2>
+      <h2 id="sobre-mi-titulo">El artista</h2>
       <article class="about-content">
         <img src="img/artista-anibal-martino.jpg" alt="Retrato de Anibal Martino, artista plástico" class="about-image">
         <div class="about-text">
           <p>
             <!-- Texto biográfico del artista: enfoque, estilo y filosofía de trabajo -->
-            Breve biografía de Anibal Martino: su formación, estilo pictórico y visión artística.
+            Anibal Martino: 
+          </p>
+          <p>
+            La relación entre un artista y su obra es profundamente personal y compleja, un viaje que culmina en una mezcla de emociones y satisfacciones. Se crea una expresión de orgullo y conexión íntima con el fruto de nuestra labor.
+          </p>
+          <p>
+            Cada trazo, cada color, cada figura refleja no solo nuestra habilidad técnica, sino también la pasión y el alma que infundimos en cada pieza.
+          </p>
+          <p>
+            Es un momento de triunfo, donde el trabajo duro se transforma en una obra de arte que ahora tiene vida propia y puede dialogar con el espectador.
           </p>
         </div>
       </article>
+    </section>
+
+    <!-- ============================= -->
+    <!-- LA OBRA (mini galería, 100vh) -->
+    <!-- ============================= -->
+    <section id="obra" class="gallery-section" aria-labelledby="obra-titulo">
+      <h2 id="obra-titulo">La obra</h2>
+      <div class="gallery-grid">
+        <!-- Fila 1: horizontal, horizontal, vertical -->
+        <div class="gallery-row">
+          <figure class="gallery-item gallery-item--horizontal">
+            <img src="gallery1-anibal-martino.jpg" alt="Obra de Anibal Martino de formato horizontal">
+          </figure>
+          <figure class="gallery-item gallery-item--horizontal">
+            <img src="gallery2-anibal-martino.jpg" alt="Obra de Anibal Martino de formato horizontal">
+          </figure>
+          <figure class="gallery-item gallery-item--vertical">
+            <img src="gallery3-anibal-martino.jpg" alt="Obra de Anibal Martino de formato vertical">
+          </figure>
+        </div>
+
+        <!-- Fila 2: vertical, horizontal, horizontal -->
+        <div class="gallery-row gallery-row--reverse">
+          <figure class="gallery-item gallery-item--vertical">
+            <img src="gallery4-anibal-martino.jpg" alt="Obra de Anibal Martino de formato vertical">
+          </figure>
+          <figure class="gallery-item gallery-item--horizontal">
+            <img src="gallery5-anibal-martino.jpg" alt="Obra de Anibal Martino de formato horizontal">
+          </figure>
+          <figure class="gallery-item gallery-item--horizontal">
+            <img src="gallery6-anibal-martino.jpg" alt="Obra de Anibal Martino de formato horizontal">
+          </figure>
+        </div>
+      </div>
     </section>
 
     <!-- ============================= -->
@@ -123,6 +169,16 @@
           <h3>Título del logro o exposición</h3>
           <p><time datetime="2022">2022</time> &mdash; Descripción breve del hito en la trayectoria del artista.</p>
         </article>
+
+        <article class="career-item">
+          <h3>Título del logro o exposición</h3>
+          <p><time datetime="2023">2023</time> &mdash; Descripción breve del hito en la trayectoria del artista.</p>
+        </article>
+
+        <article class="career-item">
+          <h3>Título del logro o exposición</h3>
+          <p><time datetime="2024">2024</time> &mdash; Descripción breve del hito en la trayectoria del artista.</p>
+        </article>
       </div>
     </section>
 
@@ -130,10 +186,18 @@
     <!-- PRÓXIMAS PRESENTACIONES (100vh) -->
     <!-- ============================= -->
     <section id="presentaciones" class="events-section" aria-labelledby="presentaciones-titulo">
-      <h2 id="presentaciones-titulo">Próximas presentaciones</h2>
+      <h2 id="presentaciones-titulo">Eventos</h2>
       <ul class="events-list">
         <!-- Repetir <li><article> por cada evento futuro -->
         <li>
+          <article class="event-item" itemscope itemtype="https://schema.org/VisualArtsEvent">
+            <h3 itemprop="name">Nombre de la exposición o evento</h3>
+            <p>
+              <time itemprop="startDate" datetime="2026-11-01">1 de noviembre de 2026</time>
+              &mdash; <span itemprop="location">Lugar del evento</span>
+            </p>
+            <p itemprop="description">Breve descripción del evento o exposición.</p>
+          </article>
           <article class="event-item" itemscope itemtype="https://schema.org/VisualArtsEvent">
             <h3 itemprop="name">Nombre de la exposición o evento</h3>
             <p>
