@@ -256,14 +256,15 @@ main section h2 {
   padding: 0.9rem 2rem;
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
-  border-radius: 2px;
-  transition: background-color var(--transition-base), color var(--transition-base);
+  border-radius: 5px;
+  transition: background-color var(--transition-base), color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
   background-color: var(--color-accent);
   color: var(--color-bg);
+  box-shadow: 0 8px 20px rgba(184, 179, 172, 0.35);
 }
 
 /* =============================================
@@ -342,6 +343,11 @@ main section h2 {
 .gallery-item {
   overflow: hidden;
   border: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-base);
+}
+
+.gallery-item:hover {
+  box-shadow: 0 8px 20px rgba(184, 179, 172, 0.35);
 }
 
 .gallery-item img {
