@@ -298,17 +298,34 @@ main section h2 {
   text-align: left;
 }
 
+.about-text-body {
+  margin-block: auto;
+}
+
+.about-signature {
+  display: block;
+  font-family: "Cinzel Decorative", var(--font-heading);
+  font-size: clamp(1.44rem, 2.88vw, 2.16rem);
+  color: #c9a15a;
+  text-align: right;
+}
+
 @media (min-width: 768px) {
   .about-content {
     grid-template-columns: 40vw 1fr;
+    align-items: stretch;
     text-align: left;
   }
 
   .about-image {
+    height: 100%;
     margin-inline: 0;
+    object-fit: cover;
   }
 
   .about-text {
+    display: flex;
+    flex-direction: column;
     margin-inline: 0;
   }
 }
@@ -377,7 +394,12 @@ main section h2 {
 /* =============================================
    TRAYECTORIA
 ============================================= */
+.career-section {
+  background-color: var(--color-bg-alt);
+}
+
 .career-timeline {
+  background-color: var(--color-bg-alt);
   max-width: var(--max-width);
   margin-inline: auto;
   display: grid;
