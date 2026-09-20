@@ -528,6 +528,7 @@ footer h2 {
 .copyright {
   font-size: 0.85rem;
   color: var(--color-text-muted);
+  margin-top: 20px;
 }
 
 /* =============================================
