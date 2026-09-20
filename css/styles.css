@@ -111,6 +111,7 @@ header[role="banner"] {
 }
 
 nav[role="navigation"] {
+  width: 80%;
   max-width: var(--max-width);
   height: 100%;
   margin-inline: auto;
@@ -118,6 +119,12 @@ nav[role="navigation"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  nav[role="navigation"] {
+    width: 100%;
+  }
 }
 
 .nav-logo {
@@ -365,14 +372,22 @@ main section h2 {
   transition: box-shadow var(--transition-base);
 }
 
-.gallery-item:hover {
-  box-shadow: 0 8px 20px rgba(184, 179, 172, 0.35);
-}
-
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform var(--transition-base);
+  transform-origin: center;
+}
+
+.gallery-item:hover,
+.gallery-item:focus-within {
+  box-shadow: 0 8px 20px rgba(184, 179, 172, 0.35);
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-within img {
+  transform: scale(1.3);
 }
 
 @media (max-width: 768px) {
@@ -513,4 +528,24 @@ footer h2 {
 .copyright {
   font-size: 0.85rem;
   color: var(--color-text-muted);
+}
+
+/* =============================================
+   ANCHO DE CONTENEDORES
+============================================= */
+.about-content,
+.gallery-grid,
+.career-timeline,
+.events-list {
+  width: 80%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+@media (max-width: 768px) {
+  .about-content,
+  .gallery-grid,
+  .career-timeline,
+  .events-list {
+    width: 100%;
+  }
 }
