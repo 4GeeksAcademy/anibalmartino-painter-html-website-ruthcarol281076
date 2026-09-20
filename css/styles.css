@@ -127,8 +127,8 @@ nav[role="navigation"] {
 }
 
 .nav-logo-image {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -276,13 +276,14 @@ main section h2 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: center;
+  align-items: start;
 }
 
 .about-image {
   border-radius: 4px;
   margin-inline: auto;
-  max-width: 320px;
+  width: min(40vw, 100%);
+  max-width: none;
 }
 
 .about-text {
@@ -290,11 +291,16 @@ main section h2 {
   margin-inline: auto;
   font-size: 1.05rem;
   color: var(--color-text-muted);
+  text-align: justify;
+}
+
+.about-text h2 {
+  text-align: left;
 }
 
 @media (min-width: 768px) {
   .about-content {
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 40vw 1fr;
     text-align: left;
   }
 
